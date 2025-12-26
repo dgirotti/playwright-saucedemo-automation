@@ -81,13 +81,17 @@ PASSWORD=secret_sauce
 
 BASE_URL=https://www.saucedemo.com
 
-The .env file is not versioned and must be created locally based on this template.
+The .env file is not versioned and must be created locally based on this template. Ensure that you have the .env file at the root of the project. 
 
 STANDARD_USER=standard_user
+
 STANDARD_PASSWORD=secret_sauce
 
 LOCKED_USER=locked_out_user
+
 LOCKED_PASSWORD=secret_sauce
+
+### (I'm sharing this information with you in order to be able to run the tests, but in a real project the users and password for .env should not be displayed in this doc.) 
 
 ## 🌍 Browser Configuration (Challenge Requirement)
 
@@ -101,14 +105,17 @@ This ensures:
 
 ## ▶️  Installation & Execution
 
-1. Install dependencies
+  
+1. Clone the Repository
+
+2. Install dependencies
     npm install
-2. Install Playwright browsers
+3. Install Playwright browsers
     npx playwright install
     npx playwright install chrome
-3. Run all tests
+4. Run all tests
     npx playwright test
-4. Run tests in headed mode
+5. Run tests in headed mode
     npx playwright test --headed
 
 ## 📊 Reports

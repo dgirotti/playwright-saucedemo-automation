@@ -138,4 +138,4 @@ To open Allure Report
 - Screenshots on failures
 
 - Trace files for debugging
->>>>>>> d52017a (Initial commit - Playwright automation framework)
+

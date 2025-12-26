@@ -83,6 +83,12 @@ BASE_URL=https://www.saucedemo.com
 
 The .env file is not versioned and must be created locally based on this template.
 
+STANDARD_USER=standard_user
+STANDARD_PASSWORD=secret_sauce
+
+LOCKED_USER=locked_out_user
+LOCKED_PASSWORD=secret_sauce
+
 ## 🌍 Browser Configuration (Challenge Requirement)
 
 All automated tests are configured to run exclusively on Google Chrome (latest stable version).

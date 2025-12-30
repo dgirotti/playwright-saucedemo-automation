@@ -10,10 +10,7 @@ test.beforeEach(async ({ page }) => {
   productsPage = new ProductsPage(page);
 
   await loginPage.goto();
-  await loginPage.login(
-    users.standard.username,
-    users.standard.password
-  );
+  await loginPage.login(users.standard.username, users.standard.password);
 });
 
 test('TC11 - Add a single product to the cart', async ({ page }) => {
@@ -22,13 +19,11 @@ test('TC11 - Add a single product to the cart', async ({ page }) => {
   await expect(page.locator('.shopping_cart_badge')).toHaveText('1');
 });
 
-test('TC13 - View Cart with added products (intentional fail)', async ({ page }) => {
+test('TC13 - View Cart with added products (intentional fail)', async ({
+  page,
+}) => {
   await productsPage.addProductToCart('Sauce Labs Backpack');
 
   // INCORRECT ASSERT TO MAKE THE TEST FAIL
   await expect(page.locator('.shopping_cart_badge')).toHaveText('2');
 });
-
-
-
-  

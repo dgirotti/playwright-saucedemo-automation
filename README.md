@@ -1,7 +1,9 @@
 <<<<<<< HEAD
+
 # playwright-saucedemo-automation
-QA Automation framework using Playwright (UI + API tests)
-=======
+
+# QA Automation framework using Playwright (UI + API tests)
+
 # QA Automation Challenge – Playwright
 
 ## 📌 Overview
@@ -11,15 +13,14 @@ The main goal is to validate key functionalities of the application under test, 
 
 ## 🛠️ Tech Stack
 
-| Item | Detail |
-|------|--------|
-| Browser | Google Chrome (latest stable version) |
-| Framework | Playwright |
-| Language | JavaScript |
-| Test Runner | Playwright Test |
-| Reporter | HTML Reporter |
-| Environment variables | dotenv (.env) |
-
+| Item                  | Detail                                |
+| --------------------- | ------------------------------------- |
+| Browser               | Google Chrome (latest stable version) |
+| Framework             | Playwright                            |
+| Language              | JavaScript                            |
+| Test Runner           | Playwright Test                       |
+| Reporter              | HTML Reporter                         |
+| Environment variables | dotenv (.env)                         |
 
 ## 🌐 Application Under Test
 
@@ -32,13 +33,13 @@ Base URL: https://www.saucedemo.com
 playwright-saucedemo/
 │
 ├── allure-results/
-│   
+│
 ├── api/
-│   └── mercadolibre.api.js  
+│   └── mercadolibre.api.js
 │
 ├── config/
 │   ├── users.js
-│   └── api.config.js       
+│   └── api.config.js
 │
 ├── pages/
 │   ├── LoginPage.js
@@ -57,7 +58,6 @@ playwright-saucedemo/
 ├── playwright.config.js
 └── README.md
 ```
-
 
 ## 📄 Folder Description
 
@@ -81,7 +81,7 @@ PASSWORD=secret_sauce
 
 BASE_URL=https://www.saucedemo.com
 
-The .env file is not versioned and must be created locally based on this template. Ensure that you have the .env file at the root of the project. 
+The .env file is not versioned and must be created locally based on this template. Ensure that you have the .env file at the root of the project.
 
 STANDARD_USER=standard_user
 
@@ -91,7 +91,7 @@ LOCKED_USER=locked_out_user
 
 LOCKED_PASSWORD=secret_sauce
 
-### (I'm sharing this information with you in order to be able to run the tests, but in a real project the users and password for .env should not be displayed in this doc.) 
+### (I'm sharing this information with you in order to be able to run the tests, but in a real project the users and password for .env should not be displayed in this doc.)
 
 ## 🌍 Browser Configuration (Challenge Requirement)
 
@@ -100,42 +100,48 @@ Configuration applied in playwright.config.js:
 browserName: 'chromium'
 channel: 'chrome'
 This ensures:
+
 - Execution on real Google Chrome
 - Tests always run on the most recent installed Chrome version
 
-## ▶️  Installation & Execution
+## ▶️ Installation & Execution
 
-  
 1. Clone the Repository
 
 2. Install dependencies
-    npm install
+   npm install
 3. Install Playwright browsers
-    npx playwright install
-    npx playwright install chrome
+   npx playwright install
+   npx playwright install chrome
 4. Run all tests
-    npx playwright test
+   npx playwright test
 5. Run tests in headed mode
-    npx playwright test --headed
+   npx playwright test --headed
 
 ## 📊 Reports
 
 After execution, an HTML report is automatically generated.
 
 To open the report:
-    
+
     npx playwright show-report
 
 To open Allure Report
-    
+
     npx allure generate allure-results --clean -o allure-report
-    
+
     npx allure open allure-report
 
 ## The report includes:
+
 - Test execution status
 
 - Screenshots on failures
 
 - Trace files for debugging
+  <<<<<<< HEAD
 
+## Tooling
+
+- ESLint
+- Prettier

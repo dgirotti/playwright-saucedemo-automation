@@ -11,22 +11,14 @@ test.describe('Login functionality', () => {
   });
 
   test('TC-01 Login with valid credentials', async ({ page }) => {
-    await loginPage.login(
-      users.standard.username,
-      users.standard.password
-    );
+    await loginPage.login(users.standard.username, users.standard.password);
 
     await expect(page).toHaveURL(/inventory/);
   });
 
   test('TC-04 Login with locked out user', async ({ page }) => {
-    await loginPage.login(
-      users.locked.username,
-      users.locked.password
-    );
+    await loginPage.login(users.locked.username, users.locked.password);
 
-    await expect(
-      page.locator(loginPage.errorMessage)
-    ).toBeVisible();
+    await expect(page.locator(loginPage.errorMessage)).toBeVisible();
   });
 });

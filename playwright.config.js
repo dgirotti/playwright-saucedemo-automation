@@ -6,6 +6,7 @@ dotenv.config();
 export default defineConfig({
   testDir: './tests',
   fullyParallel: true,
+  retries: 1,
 
   reporter: [
     ['html'],
@@ -15,7 +16,8 @@ export default defineConfig({
   use: {
     baseURL: 'https://www.saucedemo.com',
     screenshot: 'only-on-failure',
-    trace: 'on-first-retry',
+    trace: 'retain-on-failure',
+    video: 'retain-on-failure'
   },
 
   projects: [
